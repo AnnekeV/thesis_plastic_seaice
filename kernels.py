@@ -1,3 +1,6 @@
+# These are the different kernels used in the project by Anneke Vries for simulating plastic in sea ice
+# Last kernel used to determine state of particle ('in ice' or 'in water') was IceOrOcean2
+
 import glob
 import os
 from parcels import FieldSet, ParticleSet, ScipyParticle, JITParticle, ErrorCode, AdvectionRK4, Variable,ParticleFile, Field, VectorField
@@ -41,6 +44,9 @@ def TotalDistance(particle, fieldset, time):
     
 
 def IceOrOcean(particle, fieldset, time):
+    """
+    Determines state (in ice or in water) particle depending on sea ice concentration
+    """
     if random.random() < math.atan((particle.sic*100)-15)/math.pi +.5  and particle.sic >.01:
         particle.in_ice = 1
     else:
@@ -150,7 +156,11 @@ def AdvectionRK4_prob(particle, fieldset, time):
         
 
 def IceOrOcean2(particle, fieldset, time):
-    
+    """
+    This kernel determines if a praticle is in the ocean or in ice (in order to later be advected by one or the other). It first determines the state of the particle at timestep t and then for timestep t+1 it checks 
+    if the ice thickness has in or decreased. If the particle was previously in ice, and the ice has grown, it stays in ice, if the ice has become thinner, it has a chance (depending on sea ice concentration) to 
+    enter water. If the particle was previously in water, and the ice has become thinner, it will remain in water, but if the ice has increase, it has a chance (depending on sea ice concentration) to enter the ice. 
+    """
         if math.isnan(particle.prev_sit):
             particle.in_ice == 0
         
