@@ -1,0 +1,10 @@
+Core 	Station ID 	Sea ice type 	Sample location 	Sea ice origin 	Campaign 	Date 	Latitude 	Longitude
+A 	PS85_426 	Land-fast ice 	Fram Strait 	East Greenland 	FRAM 	14 June 2014 	78.27 	-14.71
+B 	PS85_472 	Pack ice 	Fram Strait 	Makarov Basin 	FRAM 	25 June 2014 	79.75 	4.30
+C 	PS92_39 	Pack ice 	North of Svalbard 	Deeper Nansen Basin 	TRANSSIZ 	11 June 2015 	81.94 	13.57
+D 	PS92_32 	Pack ice 	North of Svalbard 	Franz Josef Land 	TRANSSIZ 	06 June 2015 	81.24 	19.43
+E 	PS94_54 	Pack ice 	Nansen Basin 	Laptev Sea 	TRANSARC_II 	28 August 2015 	85.09 	42.61
+Ha 	Site_12 	Land-fast ice 	Chukchi Shelf 	Chukchi Shelf 	ICECAPE 	21 June 2010 	68.30 	-166.98
+Hb 	Site_H11 	Pack ice 	Canadian Basin 	Siberian Sea 	HORTAX 	29 August 2005 	84.31 	-149.06
+Hc 	Site_H3 	Pack ice 	Canadian Basin 	Beaufort Gyre 	HORTAX 	18 August 2005 	78.29 	-176.68
+Hd 	Site_H26 	Pack ice 	Eurasian Basin 	Laptev Sea 	HORTAX 	19 September 2005 	88.06 	58.75 
